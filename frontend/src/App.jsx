@@ -4,6 +4,7 @@ import Home from "./Home";
 import About from "./pages/Aboute";
 import Contact from "./pages/Contact";
 import Settings from "./pages/Setting";
+import Current from "./pages/Current";
 
 
 function App() {
@@ -13,6 +14,7 @@ return (
 <Route path="/home" element={<Home />} />
 <Route path="/about" element={<About />} />
 <Route path="/contact" element={<Contact />} />
+<Route path="/current" element={<Current/>} />
 <Route path="/settings" element={<Settings />} />
 </Routes>
 );

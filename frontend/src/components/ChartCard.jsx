@@ -20,7 +20,7 @@ export default function ChartCard({ title, dataKey, data = [], rowLimit = 10 }) 
   }, [data, rowLimit]);
 
   return (
-    <div className="bg-gray-800 p-4 rounded-2xl text-white shadow-md w-full">
+    <div className="bg-blue-950 p-4 rounded-2xl text-white shadow-md w-full">
       <h2 className="text-xl mb-4">{title}</h2>
 
       {/* Chart + Table side by side on md+ */}

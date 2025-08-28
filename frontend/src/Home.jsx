@@ -10,6 +10,7 @@ export default function Home() {
   return (
     <div className="bg-gray-950">
       <Navbar />
+
       <div className="p-4 justify-center text-white flex flex-col">
         <h1 className="text-3xl flex flex-col justify-center items-center mb-4">
           Real-Time Monitoring
@@ -29,10 +30,15 @@ export default function Home() {
 
         {/* Charts Section */}
         <div className="flex flex-col gap-4 justify-center items-center">
-          <ChartCard title="Current" dataKey="current" data={data} />
+          <a href="/current" className="w-full">
+            <ChartCard title="Current" dataKey="current" data={data} />
+          </a>
+
           <ChartCard title="Voltage" dataKey="voltage" data={data} />
+
           <ChartCard title="Frequency" dataKey="frequency" data={data} />
         </div>
+        <div></div>
       </div>
       <Footer />
     </div>
