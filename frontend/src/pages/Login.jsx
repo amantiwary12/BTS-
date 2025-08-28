@@ -2,7 +2,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
-// import { FaRegUser } from "react-icons/fa";
 
 
 export default function Login() {
@@ -168,16 +167,7 @@ export default function Login() {
             Login 
           </motion.button>
 
-          {/* Footer */}
-          {/* <p className="text-sm text-gray-500 text-center mt-4">
-            Don’t have an account?{" "}
-            <a
-              href="/signup"
-              className="text-blue-600 font-semibold hover:underline"
-            >
-              Sign Up
-            </a>
-          </p> */}
+        
         </form>
       </motion.div>
     </div>
