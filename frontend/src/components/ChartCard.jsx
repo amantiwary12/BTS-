@@ -185,7 +185,7 @@ export default function ChartCard({ title, dataKey, data = [], rowLimit = 10 }) 
               <YAxis stroke="#fff" />
               <Tooltip />
               <Line
-                type="monotone"
+                type="monotone" 
                 dataKey={dataKey}
                 stroke="#00f5d4"
                 strokeWidth={2}
