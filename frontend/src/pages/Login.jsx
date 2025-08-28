@@ -1,14 +1,12 @@
-
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
-
 
 export default function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
-  const [showPassword, setShowPassword] = useState(false); // 👈 new state
+  const [showPassword, setShowPassword] = useState(false);
   const navigate = useNavigate();
 
   const handleLogin = (e) => {
@@ -22,21 +20,21 @@ export default function Login() {
   };
 
   return (
-    <div className="flex items-center justify-center h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-800">
+    <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-800 px-4 sm:px-6 lg:px-8">
       <motion.div
-        initial={{ opacity: 0, y: -50, scale: 0.8 }}
+        initial={{ opacity: 0, y: -50, scale: 0.9 }}
         animate={{ opacity: 1, y: 0, scale: 1 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
-        className="bg-white rounded-2xl shadow-2xl w-96 p-8"
+        className="bg-white rounded-2xl shadow-2xl w-full max-w-sm sm:max-w-md md:max-w-lg p-6 sm:p-8"
       >
         {/* Title */}
         <motion.h2
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}
-          className="text-2xl font-bold text-center text-gray-800 mb-6"
+          className="text-xl sm:text-2xl md:text-3xl font-bold text-center text-gray-800 mb-6"
         >
-          Login in to your account
+          Login to your account
         </motion.h2>
 
         {/* Form */}
@@ -48,7 +46,7 @@ export default function Login() {
               placeholder="Enter username"
               value={username}
               onChange={(e) => setUsername(e.target.value)}
-              className="w-full p-3 pl-10 rounded-xl border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all"
+              className="w-full p-3 pl-10 rounded-xl border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all text-sm sm:text-base"
             />
             <span className="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-400">
               {/* User Icon */}
@@ -71,11 +69,11 @@ export default function Login() {
           {/* Password */}
           <div className="relative">
             <input
-              type={showPassword ? "text" : "password"} // 👈 toggle type
+              type={showPassword ? "text" : "password"}
               placeholder="Enter password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="w-full p-3 pl-10 pr-10 rounded-xl border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all"
+              className="w-full p-3 pl-10 pr-10 rounded-xl border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all text-sm sm:text-base"
             />
             {/* Left Icon */}
             <span className="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-400">
@@ -107,7 +105,6 @@ export default function Login() {
               className="absolute inset-y-0 right-0 flex items-center pr-3 text-gray-400 hover:text-gray-600"
             >
               {showPassword ? (
-                // Eye Open Icon
                 <svg
                   className="w-5 h-5"
                   fill="none"
@@ -128,7 +125,6 @@ export default function Login() {
                   />
                 </svg>
               ) : (
-                // Eye Off Icon
                 <svg
                   className="w-5 h-5"
                   fill="none"
@@ -151,7 +147,7 @@ export default function Login() {
             <motion.p
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              className="text-red-600 text-sm text-center"
+              className="text-red-600 text-sm sm:text-base text-center"
             >
               {error}
             </motion.p>
@@ -162,12 +158,10 @@ export default function Login() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             type="submit"
-            className="w-full py-3 bg-blue-600 text-white rounded-xl font-semibold shadow-md hover:bg-blue-700 transition"
+            className="w-full py-3 bg-blue-600 text-white rounded-xl font-semibold shadow-md hover:bg-blue-700 transition text-sm sm:text-base"
           >
-            Login 
+            Login
           </motion.button>
-
-        
         </form>
       </motion.div>
     </div>

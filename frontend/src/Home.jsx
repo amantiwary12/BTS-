@@ -1,4 +1,3 @@
-
 import Navbar from "./components/Navbar";
 import ChartCard from "./components/ChartCard";
 import useFakeRealtimeData from "./hooks/useFakeRealtimeData";
