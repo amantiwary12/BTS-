@@ -1,13 +1,11 @@
-import Navbar from "../components/Navbar";
+import React from 'react'
 
-export default function Settings() {
+const Setting = () => {
   return (
     <div>
-      <Navbar />
-      <div className="p-4">
-        <h1 className="text-2xl">Settings</h1>
-        <p>Admin settings and configuration options go here.</p>
-      </div>
+      this is my setting 
     </div>
-  );
+  )
 }
+
+export default Setting
